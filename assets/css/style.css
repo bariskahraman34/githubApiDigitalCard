@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *,*::before,*::after{
     margin: 0;
     padding: 0;
@@ -5,7 +7,90 @@
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
 .container{
-    max-width: 1268px;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.person-card{
+    width: 680px;
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #0d1117;
+    color: #f0f8ff;
+}
+
+.bg-img{
+    filter: brightness(0.6);
+}
+
+.profile-image{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.profile-image > img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.person-information{
+    padding: 110px 1rem 1rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+}
+.person-identity{
+    display: flex;
+    flex-direction: column;
+}
+.person-identity > .user-name{
+    font-weight: bold;
+}
+.person-identity > .full-name{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.special-character{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.user-name{
+    color: rgb(113, 118, 123);
+}
+.userName-input{
+    font-weight:lighter;
+}
+.person-information > div,
+.person-information > span{
+    margin-bottom: 20px;
+}
+.followers{
+    margin-right: 15px;
+}
+.person-card a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.person-card a:hover{
+    text-decoration: underline;
+}
+
+.followers-following > .followers-number{
+    font-weight: 900;
 }
