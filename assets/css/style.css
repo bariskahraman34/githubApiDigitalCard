@@ -8,14 +8,17 @@
 }
 
 body{
-    background-color: white;
+    background: linear-gradient(-80deg, #ee7752, #e73c7e, #A9C9FF);
     font-family: 'Roboto', sans-serif;
+    animation: gradient 5s ease infinite;
+    background-size: 400% 400%;
 }
 
 .container{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
 }
 
@@ -25,8 +28,20 @@ body{
     margin-top: 50px;
     overflow: hidden;
     border-radius: 20px;
-    background-color: #0d1117;
+    background: linear-gradient(45deg, #082f41, transparent);
     color: #f0f8ff;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .bg-img{
@@ -93,4 +108,22 @@ body{
 
 .followers-following > .followers-number{
     font-weight: 900;
+}
+#getPersonDiv{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#getPerson{
+    background-color: #0d1117;
+    padding: 1rem 2rem 1rem 2rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+    transition: background-color .3s ease;
+}
+
+#getPerson:hover{
+    background-color: #313942;
+    cursor: pointer;
 }
