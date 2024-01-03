@@ -83,7 +83,8 @@ async function fetchGithub(person){
             bio:data.bio,
             html_url:data.html_url,
             twitter_username:data.twitter_username,
-            public_repos:data.public_repos
+            public_repos:data.public_repos,
+            public_gists:data.public_gists
         })
         savePersonToLocalStorage();
         getPerson();
@@ -116,34 +117,40 @@ async function getPerson(){
                         </span>
                     </div>
                     <span class="company">
-                        <i class="fa-solid fa-building"></i>
+                        <span class="icons"><i class="fa-solid fa-building"></i></span>
                         ${person.company ? person.company : "No company information"}
                     </span>
 
                     <span class="email">${person.email ? `<a href="mailto:${person.mail}">` : ''}
-                        <i class="fa-solid fa-envelope"></i>
+                        <span class="icons"><i class="fa-solid fa-envelope"></i></span>
                         ${person.email ? person.email : "No email information"}</a>
                     </span>
 
                     <div class="followers-following">
-                        <i class="fa-solid fa-user-group"></i>
+                        <span class="icons"><i class="fa-solid fa-user-group"></i></span>
                         <span class="followers-number">${person.followers}</span>
                         <span class="followers">Followers</span>
                         <span class="followers-number">${person.following}</span>
                         <span class="following">Following</span>
                     </div>
                     <div class="location">
-                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="icons"><i class="fa-solid fa-location-dot"></i></span>
                         <span class="location-span">${person.location ? person.location : "No location information"}</span>
                     </div>
                     <span class="site">
-                        <i class="fa-solid fa-link"></i>
+                        <span class="icons"><i class="fa-solid fa-link"></i></span>
                         ${person.blog ? `<a href="${person.blog}" target="_blank">${person.blog}</a>` : "No blog information"}
                     </span>
                     <span class="site">
-                        <i class="fa-brands fa-git-alt" style="margin-right:5px;" ></i>
+                        <span class="icons"><i class="fa-brands fa-git-alt" style="margin-right:5px;" ></i></span>
                         Public Repos:
                         ${person.public_repos}
+                    </span>
+                    <span class="site">
+                        <span class="icons"><i class="fa-brands fa-square-git"></i></span>
+                        <span class="github">GitHub</span>
+                        <span class="gist">Gist:</span>
+                        <span class="publicGist">${person.public_gists}</span>
                     </span>
                     <span class="bio">${person.bio ? person.bio : "No bio information"}</span>
                     <span class="social-media-links"> 
