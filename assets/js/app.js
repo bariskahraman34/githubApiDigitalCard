@@ -1,5 +1,10 @@
 const container = document.querySelector('.card-container');
 const getPersonButton = document.querySelector('#getPerson');
+const copyright = document.querySelector('.copyright-content');
+
+const year = new Date().getFullYear();
+
+copyright.innerText = `Powered by Barış Kahraman, © Copyright ${year} - All Rights Reserved.`
 
 let savePerson = JSON.parse(localStorage.getItem('personEntries')) || [];
 
